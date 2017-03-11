@@ -243,6 +243,15 @@
            :regex "\\(defrecord\\s+JJJ\\j"
            :tests ("(defrecord test [foo]"))
 
+    ;; ;; re-frame
+    (:type "type" :supports ("ag" "grep" "rg") :language "clojure"
+           :regex "\\(register-sub\\s+JJJ\\j"
+           :tests ("(register-sub :test"))
+    ;; ;; re-frame
+    (:type "type" :supports ("ag" "grep" "rg") :language "clojure"
+           :regex "\\(register-handler\\s+JJJ\\j"
+           :tests ("(register-hander :test"))
+
     ;; coffeescript
     (:type "function" :supports ("ag" "grep" "rg") :language "coffeescript"
            :regex "^\\s*JJJ\\s*[=:].*[-=]>"
